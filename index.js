@@ -1,6 +1,6 @@
 // DataTransform
 
-exports.DataTransform = function (data, map) {
+DataTransform = function (data, map) {
 
     return {
 
