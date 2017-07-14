@@ -1,8 +1,6 @@
 // DataTransform
 
-var _ = require('lodash');
-
-exports.DataTransform = function(data, map){
+DataTransform = function(data, map){
 
 	return {
 
@@ -139,3 +137,6 @@ exports.DataTransform = function(data, map){
 	};
 
 };
+
+
+//
