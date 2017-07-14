@@ -57,14 +57,14 @@ describe("node-json-transform", function() {
 
 		var dataTransform = DataTransform(_.clone(data), map);
 
-		expect(dataTransform.transform()).toEqual([{
+		expect(JSON.stringify(dataTransform.transform())).toEqual(JSON.stringify([{
 			name: "TITLE1",
 			info: "description1",
 			text: "This is a blog.",
-			date: 1383544800000,
+			date: 1383523200000,
 			link: "http://goo.cm",
 			info: "mike"
-		}]);
+		}]));
 
 	});
 
@@ -81,7 +81,7 @@ describe("node-json-transform", function() {
 			name: "TITLE1",
 			info: "description1",
 			text: "This is a blog.",
-			date: 1383544800000,
+			date: 1383523200000,
 			link: "http://goo.cm",
 			info: "mike",
 			clearMe: ""
@@ -101,7 +101,7 @@ describe("node-json-transform", function() {
 		expect(dataTransform.transform()).toEqual([{
 			name: "TITLE1",
 			text: "This is a blog.",
-			date: 1383544800000,
+			date: 1383523200000,
 			link: "http://goo.cm",
 			info: "mike",
 			fieldThatDoesntExist: ""
