@@ -21,9 +21,6 @@
     "url": "https://github.com/bozzltron/node-json-transform/issues"
   },
   "homepage": "https://github.com/bozzltron/node-json-transform",
-  "dependencies": {
-    "lodash": "^4.16.4"
-  },
   "devDependencies": {
     "deep-freeze": "0.0.1",
     "jasmine-node": "^1.14.5"
