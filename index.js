@@ -74,7 +74,7 @@ DataTransform = function (data, map) {
                 var list = this.getList();
                 var normalized = map.item ? list.map(this.iterator.bind(this, map.item)) : list;
                 normalized = this.operate.call(this, normalized);
-                normalized = this.each(normalized);
+                normalized = this.each(normalized, list);
             }
             return normalized;
 
@@ -101,9 +101,11 @@ DataTransform = function (data, map) {
 
         },
 
-        each: function (data) {
+        each: function (data, list) {
             if (map.each) {
-                data.map(map.each);
+                data.map(function(newItem, index) {
+                    return map.each(newItem, list[index])
+                }.bind(this));
             }
             return data;
         },
